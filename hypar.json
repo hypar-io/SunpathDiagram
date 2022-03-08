@@ -1,0 +1,40 @@
+{
+  "$schema": "https://hypar.io/Schemas/Function.json",
+  "id": "6ab04713-5d14-4a2d-8961-ca11a17306e0",
+  "name": "Sunpath Diagram",
+  "description": "Create a 3D visualization of the position of the sun throughout the year.",
+  "language": "C#",
+  "model_dependencies": [
+    {
+      "name": "location"
+    }
+  ],
+  "input_schema": {
+    "type": "object",
+    "properties": {
+      "Date": {
+        "type": "string",
+        "format": "date-time"
+      },
+      "Display Radius": {
+        "type": "number",
+        "description": "The Length.",
+        "minimum": 1,
+        "$hyparUnitType": "length",
+        "default": 300
+      }
+    }
+  },
+  "outputs": [
+    {
+      "name": "Time Zone",
+      "description": "The time zone for this location",
+      "type": "string"
+    }
+  ],
+  "repository_url": "https://github.com/hypar-io/function",
+  "element_types": [
+    "https://raw.githubusercontent.com/hypar-io/Schemas/master/Origin.json"
+  ],
+  "last_updated": "0001-01-01T00:00:00"
+}
